@@ -21,7 +21,20 @@ export const WebSocketEvents = {
 
 export interface LocationUpdatePayload extends LocationData {}
 
+export interface PathPoint {
+  lat: number;
+  lng: number;
+}
+
+export interface TrackerPath {
+  points: PathPoint[];
+  currentPointIndex: number;
+  distance?: number; // meters
+  duration?: number; // seconds
+}
+
 export interface InitialStatePayload {
   trackers: Tracker[];
-  locations: Record<string, LocationData>; // A map of trackerId to their last known location
+  locations: Record<string, LocationData>;
+  paths: Record<string, TrackerPath>; // A map of trackerId to their path
 }
