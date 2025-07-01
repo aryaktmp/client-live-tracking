@@ -1,0 +1,27 @@
+{
+  "name": "@live-tracker/shared",
+  "version": "1.0.0",
+  "description": "Shared types and utilities for the Live Tracker project.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": [
+      "./dist/index.d.ts"
+    ]
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4",
+  "dependencies": {
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0"
+  }
+}
